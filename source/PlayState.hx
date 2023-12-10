@@ -2155,6 +2155,8 @@ class PlayState extends MusicBeatState
 		if (SONG.validScore)
 		{
 			#if !switch
+			var percent:Float = ratingPercent;
+			if(Math.isNaN(percent)) percent = 0;
 			Highscore.saveScore(SONG.song, songScore, storyDifficulty);
 			#end
 		}
